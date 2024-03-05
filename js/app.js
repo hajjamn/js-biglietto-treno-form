@@ -32,10 +32,10 @@ function() {
   //Calcolo Sconto per Minorenne o Oltre i 65 anni, altrimenti lo fisso per 0%
   
   
-  if (etaElement.value <= 18) {
+  if (etaElement.value == 'minor') {
     sconto = prezzoBase * 0.2;
     console.log('Sconto = ' + sconto)
-  } else if (etaElement.value >= 65) {
+  } else if (etaElement.value == 'senior') {
     sconto = prezzoBase * 0.4;
     console.log('Sconto = ' + sconto)
   } else {
@@ -44,7 +44,7 @@ function() {
   
   // Calcolo prezzo finale facendo prezzoBase - sconto
   
-  let prezzoFinale = prezzoBase - sconto;
+  prezzoFinale = prezzoBase - sconto;
   console.log('Prezzo finale = ' + prezzoFinale.toFixed(2));
 
 
