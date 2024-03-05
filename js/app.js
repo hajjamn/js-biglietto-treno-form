@@ -100,6 +100,16 @@ function() {
   
   outputElement.classList.add('d-none')
 
+  const nomeElement = document.getElementById('nome')
+  nomeElement.value = ''
 
+  const cognomeElement = document.getElementById('cognome')
+  cognomeElement.value = ''
+
+  const kilometraggioElement = document.getElementById('nome')
+  kilometraggioElement.value = ''
+
+  const etaElement = document.getElementById('eta')
+  etaElement.value = 'none'
   }
 )
