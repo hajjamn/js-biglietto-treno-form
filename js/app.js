@@ -10,10 +10,21 @@ console.log('Età = ' + etaElement) //string
 const kilometraggioElement = document.getElementById("kilometraggio") //string
 console.log('Kilometraggio = ' + kilometraggioElement) //string
 
-//Creo costante del pulsante di invio
+//Salvo costanti nome e cognome
 
-const inviaElement = document.querySelector('button'); //string
+const nomeElement = document.getElementById("nome") //string
+console.log('Nome = ' + nomeElement) //string
+
+const cognomeElement = document.getElementById("cognome") //string
+console.log('Cognome = ' + cognomeElement) //string
+
+//Creo costante del pulsante di invio e annulla
+
+const inviaElement = document.getElementById('submit'); //string
 console.log(`Il pulsante di invio è ${inviaElement}`) //string
+
+const clearElement = document.getElementById('clear')
+console.log(`Il pulsante di annulla è ${clearElement}`) //string
 
 // Definisco prezzo base, sconto e prezzoFinale
 
@@ -49,12 +60,21 @@ function() {
 
   // Stampo tutte le informazioni sulla pagina
 
-  const outputElement = document.querySelector('.output')
-  outputElement.innerHTML += `
-  <span>Prezzo iniziale: ${prezzoBase}</span>
-  <span>Sconto: ${sconto}</span>
-  <span>Prezzo finale: ${prezzoFinale}</span>
-  `
+  const nomeElementOutput = document.querySelector('.output-nome')
+  nomeElementOutput.innerHTML = nomeElement.value
+
+  const cognomeElementOutput = document.querySelector('.output-cognome')
+  cognomeElementOutput.innerHTML = cognomeElement.value
+
+  const prezzoBaseElementOutput = document.querySelector('.output-prezzo-base')
+  prezzoBaseElementOutput.innerHTML = prezzoBase
+
+  const scontoElementOutput = document.querySelector('.output-sconto')
+  scontoElementOutput.innerHTML = sconto
+
+  const prezzoFinaleElementOutput = document.querySelector('.output-prezzo-finale')
+  prezzoFinaleElementOutput.innerHTML = prezzoFinale
+
 
   }
 );
