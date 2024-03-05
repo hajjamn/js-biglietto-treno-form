@@ -80,13 +80,13 @@ function() {
   cognomeElementOutput.innerHTML = cognomeElement.value
 
   const prezzoBaseElementOutput = document.querySelector('.output-prezzo-base')
-  prezzoBaseElementOutput.innerHTML = prezzoBase  + '€'
+  prezzoBaseElementOutput.innerHTML = prezzoBase.toFixed(2)  + '€'
 
   const scontoElementOutput = document.querySelector('.output-sconto')
-  scontoElementOutput.innerHTML = sconto + '€'
+  scontoElementOutput.innerHTML = sconto.toFixed(2) + '€'
 
   const prezzoFinaleElementOutput = document.querySelector('.output-prezzo-finale')
-  prezzoFinaleElementOutput.innerHTML = prezzoFinale + '€'
+  prezzoFinaleElementOutput.innerHTML = prezzoFinale.toFixed(2) + '€'
 
 
   }
@@ -106,7 +106,7 @@ function() {
   const cognomeElement = document.getElementById('cognome')
   cognomeElement.value = ''
 
-  const kilometraggioElement = document.getElementById('nome')
+  const kilometraggioElement = document.getElementById('kilometraggio')
   kilometraggioElement.value = ''
 
   const etaElement = document.getElementById('eta')
