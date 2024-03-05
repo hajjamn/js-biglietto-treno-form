@@ -47,6 +47,14 @@ function() {
   prezzoFinale = prezzoBase - sconto;
   console.log('Prezzo finale = ' + prezzoFinale.toFixed(2));
 
+  // Stampo tutte le informazioni sulla pagina
+
+  const outputElement = document.querySelector('.output')
+  outputElement.innerHTML += `
+  <span>Prezzo iniziale: ${prezzoBase}</span>
+  <span>Sconto: ${sconto}</span>
+  <span>Prezzo finale: ${prezzoFinale}</span>
+  `
 
   }
 );
