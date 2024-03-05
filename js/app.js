@@ -1,14 +1,14 @@
 /* console.log('ciao mondo') */
 
-//Richiedo e salvo costante Età
+//Salvo costante Età
 
-const eta = parseInt(prompt('Inserire età'))
-console.log('Età = ' + eta)
+const etaElement = document.getElementById("eta")
+console.log('Età = ' + etaElement)
 
-//Richiedo e salvo costante Kilometri
+//Salvo costante Kilometri
 
-const kilometraggio = parseFloat(prompt('Inserire kilometraggio'))
-console.log('Kilometraggio = ' + kilometraggio)
+const kilometraggioElement = document.getElementById("kilometraggio")
+console.log('Kilometraggio = ' + kilometraggioElement)
 
 //Calcolo Prezzo Base Biglietto facendo Kilometri x 0.21
 
