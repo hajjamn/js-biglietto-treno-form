@@ -1,22 +1,6 @@
 /* console.log('ciao mondo') */
 
-//Salvo costante Età
 
-const etaElement = document.getElementById("eta") //string
-console.log('Età = ' + etaElement) //string
-
-//Salvo costante Kilometri
-
-const kilometraggioElement = document.getElementById("kilometraggio") //string
-console.log('Kilometraggio = ' + kilometraggioElement) //string
-
-//Salvo costanti nome e cognome
-
-const nomeElement = document.getElementById("nome") //string
-console.log('Nome = ' + nomeElement) //string
-
-const cognomeElement = document.getElementById("cognome") //string
-console.log('Cognome = ' + cognomeElement) //string
 
 //Creo costante del pulsante di invio e annulla
 
@@ -26,16 +10,45 @@ console.log(`Il pulsante di invio è ${inviaElement}`) //string
 const clearElement = document.getElementById('clear')
 console.log(`Il pulsante di annulla è ${clearElement}`) //string
 
-// Definisco prezzo base, sconto e prezzoFinale
+// Definisco output element
 
-let prezzoBase, sconto, prezzoFinale
+const outputElement = document.getElementById('output')
+
+
 
 // Ascolto il pulasnte di invio
 
 inviaElement.addEventListener('click',
 function() {
-  console.log(`Il pulsante ${inviaElement} è stato cliccato, i kilometri sono ${kilometraggioElement.value} e l eta è ${etaElement.value}`)
+  console.log(`Il pulsante ${inviaElement} è stato cliccato`)
+
+  // Definisco prezzo base, sconto e prezzoFinale
+
+  let prezzoBase, sconto, prezzoFinale
+
+  //Mostro l-output element
+  outputElement.classList.remove('d-none')
+
+  //Salvo costante Età
+
+  const etaElement = document.getElementById("eta") //string
+  console.log('Età = ' + etaElement) //string
+
+  //Salvo costante Kilometri
+
+  const kilometraggioElement = document.getElementById("kilometraggio") //string
+  console.log('Kilometraggio = ' + kilometraggioElement) //string
+
+  //Salvo costanti nome e cognome
+
+  const nomeElement = document.getElementById("nome") //string
+  console.log('Nome = ' + nomeElement) //string
+
+  const cognomeElement = document.getElementById("cognome") //string
+  console.log('Cognome = ' + cognomeElement) //string
+
   
+    
   //Calcolo Prezzo Base Biglietto facendo Kilometri x 0.21
   prezzoBase = parseFloat(kilometraggioElement.value) * 0.21;
   console.log('Prezzo base = ' + prezzoBase)
@@ -67,16 +80,26 @@ function() {
   cognomeElementOutput.innerHTML = cognomeElement.value
 
   const prezzoBaseElementOutput = document.querySelector('.output-prezzo-base')
-  prezzoBaseElementOutput.innerHTML = prezzoBase
+  prezzoBaseElementOutput.innerHTML = prezzoBase  + '€'
 
   const scontoElementOutput = document.querySelector('.output-sconto')
-  scontoElementOutput.innerHTML = sconto
+  scontoElementOutput.innerHTML = sconto + '€'
 
   const prezzoFinaleElementOutput = document.querySelector('.output-prezzo-finale')
-  prezzoFinaleElementOutput.innerHTML = prezzoFinale
+  prezzoFinaleElementOutput.innerHTML = prezzoFinale + '€'
 
 
   }
 );
   
+
+/* Pulsante annulla */
+
+clearElement.addEventListener('click',
+function() {
   
+  outputElement.classList.add('d-none')
+
+
+  }
+)
